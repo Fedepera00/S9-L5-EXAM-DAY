@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "brand": "Fiat",
+    "brandLogo": "../assets/img/Fiat.png",
+    "model": "500L",
+    "modelImage": "../assets/img/500L.png",
+    "year": 2015,
+    "price": 7500,
+    "available": false
+  },
+  {
+    "id": "2",
+    "brand": "Fiat",
+    "brandLogo": "../assets/img/Fiat.png",
+    "model": "500 Abarth",
+    "modelImage": "../assets/img/500-abarth.png",
+    "year": 2010,
+    "price": 3500,
+    "available": true
+  },
+  {
+    "id": "3",
+    "brand": "Fiat",
+    "brandLogo": "../assets/img/Fiat.png",
+    "model": "Freemont",
+    "modelImage": "../assets/img/fiat_freemont.jpg",
+    "year": 2014,
+    "price": 17000,
+    "available": false
+  },
+  {
+    "id": "4",
+    "brand": "Ford",
+    "brandLogo": "../assets/img/Ford.png",
+    "model": "Taurus",
+    "modelImage": "../assets/img/ford-taurus.png",
+    "year": 2009,
+    "price": 5200,
+    "available": false
+  },
+  {
+    "id": "5",
+    "brand": "Ford",
+    "brandLogo": "../assets/img/Ford.png",
+    "model": "Focus",
+    "modelImage": "../assets/img/ford-focus.png",
+    "year": 2014,
+    "price": 9700,
+    "available": true
+  },
+  {
+    "id": "6",
+    "brand": "Ford",
+    "brandLogo": "../assets/img/Ford.png",
+    "model": "Mustang",
+    "modelImage": "../assets/img/ford-mustang.jpg",
+    "year": 2023,
+    "price": 65000,
+    "available": true
+  },
+  {
+    "id": "7",
+    "brand": "Audi",
+    "brandLogo": "../assets/img/Audi.png",
+    "model": "A3",
+    "modelImage": "../assets/img/audi-a3.png",
+    "year": 2012,
+    "price": 4300,
+    "available": true
+  },
+  {
+    "id": "8",
+    "brand": "Audi",
+    "brandLogo": "../assets/img/Audi.png",
+    "model": "Q7",
+    "modelImage": "../assets/img/audi-q7.png",
+    "year": 2020,
+    "price": 41700,
+    "available": false
+  },
+  {
+    "id": "9",
+    "brand": "Audi",
+    "brandLogo": "../assets/img/Audi.png",
+    "model": "R8 Spyder",
+    "modelImage": "../assets/img/R8 Spyder_2.jpeg",
+    "year": 2024,
+    "price": 197000,
+    "available": true
+  }
+]

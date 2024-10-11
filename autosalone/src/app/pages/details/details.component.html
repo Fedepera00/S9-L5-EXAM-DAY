@@ -1,0 +1,34 @@
+<div class="container mt-5" *ngIf="car">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <div class="card shadow">
+        <img [src]="car.modelImage" class="card-img-top" [alt]="car.model" />
+        <div class="card-body">
+          <h3 class="card-title text-center">
+            {{ car.brand }} {{ car.model }}
+          </h3>
+          <p class="card-text">Anno: {{ car.year }}</p>
+          <p class="card-text">Prezzo: {{ car.price }}€</p>
+          <p class="card-text">
+            Disponibilità:
+            <span
+              class="badge"
+              [ngClass]="{
+                'bg-success': car.available,
+                'bg-danger': !car.available
+              }"
+            >
+              {{ car.available ? "Disponibile" : "Non disponibile" }}
+            </span>
+          </p>
+          <p class="card-text">
+            Descrizione del modello: Questo è un fantastico modello di
+            {{ car.model }} del brand {{ car.brand }} che offre comfort e
+            performance uniche nel suo genere.
+          </p>
+          <a routerLink="/" class="btn btn-primary mt-3">Torna alla Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

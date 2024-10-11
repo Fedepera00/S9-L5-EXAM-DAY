@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12 text-center mb-4">
+      <h2>{{ brand }} - Modelli Disponibili</h2>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+    <div class="col mb-4" *ngFor="let car of brandCars">
+      <!-- Itera su ogni auto della marca che selezioniamo-->
+      <div class="card h-100">
+        <img [src]="car.modelImage" class="card-img-top" [alt]="car.model" />
+
+        <div class="card-body">
+          <h5 class="card-title">{{ car.brand }} {{ car.model }}</h5>
+          <p class="card-text">Anno: {{ car.year }}</p>
+          <p class="card-text">Prezzo: {{ car.price }}€</p>
+          <p class="card-text">
+            <span
+              class="badge"
+              [ngClass]="{
+                'bg-success': car.available,
+                'bg-danger': !car.available
+              }"
+            >
+              {{ car.available ? "Disponibile" : "Non disponibile" }}
+              <!-- DISPONIBILE O NO? -->
+            </span>
+          </p>
+          <a [routerLink]="['/details', car.id]" class="btn btn-primary mt-2"
+            >Scopri di più
+            <!-- Link  dettagli Auto -->
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

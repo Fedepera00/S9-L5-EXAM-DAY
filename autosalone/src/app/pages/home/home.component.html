@@ -1,0 +1,55 @@
+<div class="container">
+  <!--marchi -->
+  <div class="row border-bottom py-5">
+    <div class="col-12 text-center mb-5">
+      <h2>I Partner con cui EliteDrive collabora</h2>
+    </div>
+    <div class="col text-center" *ngFor="let brand of brands">
+      <!-- Itera sui marchi per mostrare i logo -->
+      <a [routerLink]="['/carBrands', brand]">
+        <img
+          [src]="'assets/img/' + brand + '.png'"
+          [alt]="'Logo ' + brand"
+          class="img-fluid"
+          style="max-height: 100px"
+        />
+      </a>
+    </div>
+  </div>
+
+  <!-- Auto proposte -->
+  <div class="row mt-5">
+    <div class="col text-center">
+      <h2>Auto per le vostre Esigenze</h2>
+    </div>
+  </div>
+  <div
+    class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 justify-content-center my-5"
+  >
+    <div class="col mb-4" *ngFor="let car of carsArray">
+      <!-- Itera su ogni auto per mostrarla come una card -->
+      <div class="card h-100">
+        <img [src]="car.modelImage" class="card-img-top" [alt]="car.model" />
+        <div class="card-body">
+          <h5 class="card-title">{{ car.brand }} {{ car.model }}</h5>
+          <p class="card-text">Anno: {{ car.year }}</p>
+          <p class="card-text">Prezzo: {{ car.price }}€</p>
+          <p class="card-text">
+            <span
+              class="badge"
+              [ngClass]="{
+                'bg-success': car.available,
+                'bg-danger': !car.available
+              }"
+            >
+              {{ car.available ? "Disponibile" : "Non disponibile" }}
+            </span>
+          </p>
+          <a [routerLink]="['/details', car.id]" class="btn btn-primary mt-2"
+            >Scopri di più</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
